@@ -1,0 +1,8 @@
+.vagrant
+*.log
+*.pyc
+*.key
+*.ova
+vms
+*.spoiler
+reviews_writeups

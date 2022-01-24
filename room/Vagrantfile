@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  # Operating System
+  config.vm.box = "ubuntu/bionic64"
+
+  # Networking
+  config.vm.network "private_network", type: "dhcp"
+
+  # Files and Folders
+  config.vm.synced_folder "./data", "/data"
+
+  # Provider
+  config.vm.provider "virtualbox" do |v|
+      v.gui = false
+      v.memory = 4096
+      v.cpus = 2
+      v.name = "Hamlet"
+  end
+
+  # Provisioning
+  #config.vm.provision "shell", path: "bootstrap.sh"
+end

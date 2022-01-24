@@ -1,0 +1,11 @@
+[Unit]
+Description=Gravediggers
+
+[Service]
+WorkingDirectory=/home/gravediggers
+ExecStart=/usr/bin/python3 /home/gravediggers/gravediggers.py
+User=root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
